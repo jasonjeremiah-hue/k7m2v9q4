@@ -1,0 +1,94 @@
+{
+  "retrieved_at": "2026-10-27T08:56:09.223934+00:00",
+  "source": "Elexon Insights Solution",
+  "decision_date_from": "2026-01-01",
+  "decision_date_to": "2026-01-31",
+  "delivery_date_from": "2026-01-02",
+  "delivery_date_to": "2026-02-01",
+  "unit": "MW",
+  "files": [
+    {
+      "dataset": "WINDFOR",
+      "file": "windfor.json.gz",
+      "records": 22192,
+      "sha256": "626cecd6ea08ddf9e19b64d7f7adc3413770fb552a0de32ae48f9109d064a6cc",
+      "start_time_min": "2025-12-24T21:00:00Z",
+      "start_time_max": "2026-02-02T21:00:00Z",
+      "publish_time_min": "2025-12-25T02:30:00Z",
+      "publish_time_max": "2026-01-31T22:30:00Z"
+    },
+    {
+      "dataset": "FUELHH",
+      "file": "fuelhh.json.gz",
+      "records": 1488,
+      "sha256": "8dff4464ef3d135109d4852b5fe42bd57d2647aca2193d1330f986ce882d0bb0",
+      "start_time_min": "2026-01-02T00:00:00Z",
+      "start_time_max": "2026-02-01T23:30:00Z",
+      "publish_time_min": "2026-01-02T00:30:00Z",
+      "publish_time_max": "2026-02-02T00:00:00Z"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-25T00%3A00%3A00Z&publishDateTimeTo=2025-12-30T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-30T00%3A00%3A00Z&publishDateTimeTo=2026-01-04T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-04T00%3A00%3A00Z&publishDateTimeTo=2026-01-09T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-09T00%3A00%3A00Z&publishDateTimeTo=2026-01-14T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-14T00%3A00%3A00Z&publishDateTimeTo=2026-01-19T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-19T00%3A00%3A00Z&publishDateTimeTo=2026-01-24T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-24T00%3A00%3A00Z&publishDateTimeTo=2026-01-29T00%3A00%3A00Z",
+      "record_count": 2920
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-29T00%3A00%3A00Z&publishDateTimeTo=2026-02-01T00%3A00%3A00Z",
+      "record_count": 1752
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-02&settlementDateTo=2026-01-06&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-07&settlementDateTo=2026-01-11&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-12&settlementDateTo=2026-01-16&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-17&settlementDateTo=2026-01-21&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-22&settlementDateTo=2026-01-26&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-27&settlementDateTo=2026-01-31&fuelType=WIND",
+      "record_count": 240
+    },
+    {
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-02-01&settlementDateTo=2026-02-01&fuelType=WIND",
+      "record_count": 48
+    }
+  ],
+  "note": "Source archive, not synthetic data. FUELHH reflects outturn as retrieved, not a historical outturn vintage."
+}

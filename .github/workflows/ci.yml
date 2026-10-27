@@ -1,0 +1,43 @@
+name: Verify application
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: corepack enable && corepack prepare pnpm@11.25.0 --activate
+      - run: pnpm install --frozen-lockfile
+      - run: python -m unittest discover -s tests -v
+      - run: pnpm test && pnpm build
+      - name: Build the production container
+        run: docker build -t aeris:ci .
+      - name: Check the running container
+        run: |
+          docker run -d --name aeris-ci -p 8080:8080 --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges:true aeris:ci
+          python - <<'PY'
+          import json, time, urllib.request
+          for attempt in range(15):
+              try:
+                  with urllib.request.urlopen('http://127.0.0.1:8080/api/health') as r:
+                      assert json.load(r)['archive_verified']
+                  break
+              except Exception:
+                  if attempt == 14: raise
+                  time.sleep(1)
+          with urllib.request.urlopen('http://127.0.0.1:8080/api/analysis?date=2026-01-15&cutoff=09:00') as r:
+              assert json.load(r)['summary']['mae_mw'] == 782.75
+          with urllib.request.urlopen('http://127.0.0.1:8080/') as r:
+              assert b'<div id="root">' in r.read()
+          PY
