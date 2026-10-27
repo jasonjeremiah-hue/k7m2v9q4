@@ -2,7 +2,7 @@ import { useId, useState } from "react";
 import { hourLabel, number, gw, dateLabel } from "../lib/format.mjs";
 
 const W = 1100,
-  H = 285,
+  H = 230,
   LEFT = 50,
   RIGHT = 17,
   TOP = 20,
