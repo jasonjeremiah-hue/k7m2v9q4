@@ -2116,6 +2116,55 @@ code {
     font-size: 11px;
   }
 }
+/* Contrast review: keep secondary copy readable on both white and the page gray.
+   Chart stroke colors remain unchanged and are distinguished by line pattern. */
+.sidebar-footnote,
+.metric-label,
+.metric-detail,
+.metric-number > span,
+.chart-toolbar p,
+.axis-unit,
+.legend-item,
+.notice,
+.context-grid article p,
+.observation-row,
+.page-footer,
+.chart-instruction,
+.daily-y-label,
+.day-bar-label,
+.accuracy-explain dt,
+.table-panel thead th,
+.table-panel tbody td,
+.explorer-summary,
+.explorer-toolbar p,
+.table-filters label,
+.table-filters select,
+.table-time-end,
+.table-footer,
+.provenance-meta,
+.source-files span,
+.source-files code,
+.attribution,
+.mobile-chart-hint,
+.source-link {
+  color: #63728a;
+}
+.wind-chart text {
+  fill: #63728a;
+}
+.text-button,
+.source-reference-list > a,
+.table-panel td.forecast-cell {
+  color: #086b56;
+}
+.table-panel td.actual-cell,
+.error-value.negative {
+  color: #3e6890;
+}
+.error-value.positive {
+  color: #825d36;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
