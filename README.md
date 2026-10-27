@@ -4,7 +4,7 @@ A point-in-time decision desk for UK national wind forecasts. Built for the Janu
 
 ## Review the product
 
-- **Live application:** deployment in progress; final URL will be recorded here after verification.
+- **Live application:** https://k7m2v9q4.vercel.app/
 - **Video:** not recorded yet. The required two-part, unlisted YouTube presentation must be recorded by the applicant before submission. See [the recording guide](docs/VIDEO-GUIDE.md).
 - **Repository:** https://github.com/jasonjeremiah-hue/k7m2v9q4
 

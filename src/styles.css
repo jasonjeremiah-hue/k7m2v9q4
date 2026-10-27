@@ -2164,6 +2164,16 @@ code {
 .error-value.positive {
   color: #825d36;
 }
+.notice {
+  color: #52647c;
+}
+.legend-item.muted {
+  opacity: 1;
+  color: #63728a;
+}
+.legend-item.muted .legend-line {
+  opacity: 0.3;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,

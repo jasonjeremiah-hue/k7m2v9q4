@@ -15,9 +15,9 @@
 
 ## Must verify before submitting
 
-- [ ] New public repository contains the reviewed code, not private workspace/migration files.
-- [ ] Vercel frontend AND Python API work from the deployed URL.
-- [ ] GitHub CI/Docker smoke check actually passed (do not infer from workflow existence).
+- [x] New public repository contains the reviewed code, not private workspace/migration files.
+- [x] Vercel frontend AND Python API work from the deployed URL: https://k7m2v9q4.vercel.app/.
+- [x] GitHub CI/Docker smoke check actually passed; review the newest run after any subsequent change.
 - [ ] Applicant has studied and can explain the implementation.
 - [ ] Required own video recorded, <=10 minutes, customer then technical portions.
 - [ ] Unlisted YouTube video link added to README.
