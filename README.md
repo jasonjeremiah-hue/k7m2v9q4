@@ -127,25 +127,26 @@ React browser -> same-origin /api -> Python HTTP adapter -> pure analysis engine
                                                         -> verified gzip archives
 ```
 
-| Path | Responsibility |
-| --- | --- |
-| `src/App.jsx` | URL-backed navigation, selected decision/cutoff, view composition |
-| `src/components/` | Reusable shell, controls, metrics, notices and accessible SVG chart |
-| `src/pages/` | Decision, month accuracy, explorer and methodology views |
-| `src/lib/` | Unit/date formatting and abortable API loading |
-| `src/styles.css` | Shared tokens, responsive layouts, focus and reduced-motion styles |
-| `backend/analysis.py` | Vintage selection, half-hour aggregation, metrics and verified archive cache |
-| `backend/http.py` | Read-only JSON/CSV HTTP endpoints and input/error handling |
-| `backend/server.py` | Native local/Docker server, including safe static-file serving |
-| `api/index.py` | Vercel Python function adapter; same backend, no duplicated calculations |
-| `data/` | Compressed real source records and provenance/checksum manifest |
-| `scripts/fetch_data.py` | Explicit, repeatable archive refresh; fixed upstream endpoints |
-| `scripts/dev.mjs` | Cross-platform local process launcher |
-| `tests/` | Python domain/HTTP integration tests and JavaScript formatting tests |
-| `.github/workflows/ci.yml` | Tests, frontend production build and Docker smoke check |
-| `Dockerfile`, `compose.yaml` | Multi-stage image and hardened local production configuration |
-| `vercel.json` | Vite build, Python bundling, API routing and security headers |
-| `docs/` | Architecture, recording guide and submission checklist |
+| Path                         | Responsibility                                                               |
+| ---------------------------- | ---------------------------------------------------------------------------- |
+| `src/App.jsx`                | URL-backed navigation, selected decision/cutoff, view composition            |
+| `src/components/`            | Reusable shell, controls, metrics, notices and accessible SVG chart          |
+| `src/pages/`                 | Decision, month accuracy, explorer and methodology views                     |
+| `src/lib/`                   | Unit/date formatting and abortable API loading                               |
+| `src/styles.css`             | Shared tokens, responsive layouts, focus and reduced-motion styles           |
+| `backend/analysis.py`        | Vintage selection, half-hour aggregation, metrics and verified archive cache |
+| `backend/http.py`            | Read-only JSON/CSV HTTP endpoints and input/error handling                   |
+| `backend/server.py`          | Native local/Docker server, including safe static-file serving               |
+| `api/index.py`               | Vercel Python function adapter; same backend, no duplicated calculations     |
+| `data/`                      | Compressed real source records and provenance/checksum manifest              |
+| `scripts/fetch_data.py`      | Explicit, repeatable archive refresh; fixed upstream endpoints               |
+| `scripts/dev.mjs`            | Cross-platform local process launcher                                        |
+| `tests/`                     | Python domain/HTTP integration tests and JavaScript formatting tests         |
+| `.github/workflows/ci.yml`   | Tests, frontend production build and Docker smoke check                      |
+| `Dockerfile`, `compose.yaml` | Multi-stage image and hardened local production configuration                |
+| `vercel.json`                | Vite build, Python bundling, API routing and security headers                |
+| `docs/`                      | Architecture, recording guide and submission checklist                       |
+
 ```
 
 The service uses sorted vintage indexes and binary search. Warm archive reads and analysis results are bounded in-process caches, not a database. No credentials or mutable user data are needed. Deployments package the source archive with the Python function, avoiding provider outages, CORS issues and secret configuration. Backend code is standard-library-only to keep the cold-start/dependency footprint small.
@@ -172,3 +173,4 @@ Use the deployed root URL and `/api/health` to verify frontend and backend, then
 ## AI assistance disclosure
 
 **OpenAI Codex was used substantially** for research assistance, implementation, tests, documentation and UI refinement. An AI-generated design concept informed the initial visual direction. This is disclosed explicitly as required by the assignment. The applicant must review and understand the code, validate the results, and give their own customer presentation and technical walkthrough; the repository must not be represented as unaided work. No AI service is called by the running application.
+```
